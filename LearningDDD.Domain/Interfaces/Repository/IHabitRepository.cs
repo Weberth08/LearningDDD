@@ -1,4 +1,4 @@
-﻿using LearningDDD.Domain.Model;
+﻿using LearningDDD.Domain.Entities;
 
 namespace LearningDDD.Domain.Interfaces.Repository
 {
