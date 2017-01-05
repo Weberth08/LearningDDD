@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LearningDDD.Domain.Model
+namespace LearningDDD.Domain.Entities
 {
     public class User
     {
