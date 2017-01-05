@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Service", "2 - Service"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{5F33840C-20A7-4E13-8117-76AC236B8791}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Data", "4 - Data", "{0838A264-A3DF-4BAD-93E2-3420C2DAD20E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - Infrastructure", "{0838A264-A3DF-4BAD-93E2-3420C2DAD20E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningDDD.Presentation", "LearningDDD.Presentation\LearningDDD.Presentation.csproj", "{7B442166-807B-4A80-A536-6EEDF7B81714}"
 EndProject
