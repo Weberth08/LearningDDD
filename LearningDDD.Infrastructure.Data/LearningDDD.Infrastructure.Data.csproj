@@ -50,7 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\LearningDDDContext.cs" />
+    <Compile Include="EntityConfig\HabitAcitivityConfiguration.cs" />
     <Compile Include="EntityConfig\HabitConfiguration.cs" />
+    <Compile Include="EntityConfig\UserConfiguration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

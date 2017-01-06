@@ -7,8 +7,9 @@ namespace LearningDDD.Infrastructure.Data.EntityConfig
     {
         public HabitAcitivityConfiguration()
         {
-            HasKey(h => h.HabitId);
+            HasKey(h => h.HabitActivityId);
             ConfigureCompletedField();
+            ConfigureRelationShip();
 
         }
 
@@ -16,6 +17,14 @@ namespace LearningDDD.Infrastructure.Data.EntityConfig
         {
             Property(p => p.Completed)
                 .IsRequired();
+        }
+
+        public void ConfigureRelationShip()
+        {
+            // 1 Habit : N HabitActivity
+            HasRequired<Habit>(h => h.Habit)
+                .WithMany()
+                .HasForeignKey(h => h.HabitId);
         }
     }
 }

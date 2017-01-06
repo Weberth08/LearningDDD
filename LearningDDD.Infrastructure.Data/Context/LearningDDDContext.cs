@@ -23,6 +23,8 @@ namespace LearningDDD.Infrastructure.Data.Context
             modelBuilder.Conventions.Remove<PluralizingEntitySetNameConvention>();
 
             modelBuilder.Configurations.Add(new HabitConfiguration());
+            modelBuilder.Configurations.Add(new HabitAcitivityConfiguration());
+            modelBuilder.Configurations.Add(new UserConfiguration());
 
             modelBuilder.Properties()
                 .Where(p => p.Name == p.ReflectedType.Name + "Id")
