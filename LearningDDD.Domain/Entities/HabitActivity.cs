@@ -9,5 +9,6 @@ namespace LearningDDD.Domain.Entities
         public string Note { get; set; }
         public bool Completed { get; set; }
         public DateTime CreationDate { get; set; }
+        public virtual Habit Habit { get; set; }
     }
 }
