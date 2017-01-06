@@ -1,22 +1,27 @@
-﻿using System;
+﻿using AutoMapper;
+using LearningDDD.Domain.Entities;
+using LearningDDD.Infrastructure.Data.Repository;
+using LearningDDD.Presentation.ViewModels;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace LearningDDD.Presentation.Controllers
 {
     public class HabitsController : Controller
     {
+        private readonly HabitRepository _habitRepository = new HabitRepository();
+
         // GET: Habits
         public ActionResult Index()
         {
-            return View();
+            var habitViewModel = Mapper.Map<IEnumerable<Habit>, IEnumerable<HabitViewModel>>(_habitRepository.GetAll());
+            return View(habitViewModel);
         }
 
         // GET: Habits/Details/5
         public ActionResult Details(int id)
         {
+
             return View();
         }
 
@@ -28,18 +33,18 @@ namespace LearningDDD.Presentation.Controllers
 
         // POST: Habits/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(HabitViewModel habit)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
+                var habitDomain = Mapper.Map<HabitViewModel, Habit>(habit);
+                _habitRepository.Add(habitDomain);
 
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+
+            return View(habit);
         }
 
         // GET: Habits/Edit/5

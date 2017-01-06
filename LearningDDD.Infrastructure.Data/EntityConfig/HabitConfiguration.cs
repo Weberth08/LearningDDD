@@ -32,8 +32,8 @@ namespace LearningDDD.Infrastructure.Data.EntityConfig
         private void ConfigureCreationDateField()
         {
             Property(p => p.CreationDate)
-               .IsRequired()
-               .HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Computed);
+                .IsOptional();
+
 
         }
 
