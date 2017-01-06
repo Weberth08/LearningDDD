@@ -5,7 +5,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace LearningDDD.Infrastructure.Data.Context
 {
-    class LearningDDDContext : DbContext
+    public class LearningDDDContext : DbContext
     {
         public LearningDDDContext() : base("LearningDDD")
         {
