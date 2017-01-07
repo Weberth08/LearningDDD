@@ -49,6 +49,7 @@
     <Compile Include="Interfaces\IHabitAppService.cs" />
     <Compile Include="Interfaces\IUserAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserAppService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LearningDDD.Domain\LearningDDD.Domain.csproj">

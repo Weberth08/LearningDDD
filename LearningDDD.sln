@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningDDD.Infrastructure.Data", "LearningDDD.Infrastructure.Data\LearningDDD.Infrastructure.Data.csproj", "{03D849B9-0FE7-48CF-98EC-C3B9C3527ECA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningDDD.Application", "LearningDDD.Application\LearningDDD.Application.csproj", "{2AAAED4E-73C5-4C97-A60E-D88045FEF4A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{03D849B9-0FE7-48CF-98EC-C3B9C3527ECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03D849B9-0FE7-48CF-98EC-C3B9C3527ECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03D849B9-0FE7-48CF-98EC-C3B9C3527ECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AAAED4E-73C5-4C97-A60E-D88045FEF4A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AAAED4E-73C5-4C97-A60E-D88045FEF4A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AAAED4E-73C5-4C97-A60E-D88045FEF4A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AAAED4E-73C5-4C97-A60E-D88045FEF4A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,5 +61,6 @@ Global
 		{881F4FDE-FB2D-4D85-922D-B212C4430DB0} = {5F33840C-20A7-4E13-8117-76AC236B8791}
 		{D47D7239-4D93-46CB-B6CD-2A4C767D1419} = {0838A264-A3DF-4BAD-93E2-3420C2DAD20E}
 		{03D849B9-0FE7-48CF-98EC-C3B9C3527ECA} = {D47D7239-4D93-46CB-B6CD-2A4C767D1419}
+		{2AAAED4E-73C5-4C97-A60E-D88045FEF4A3} = {D22C74C2-D410-4524-8512-CB0A71FD100A}
 	EndGlobalSection
 EndGlobal
