@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
+using LearningDDD.Application;
 using LearningDDD.Domain.Entities;
-using LearningDDD.Infrastructure.Data.Repository;
 using LearningDDD.Presentation.ViewModels;
 using System.Collections.Generic;
 using System.Web.Mvc;
@@ -9,12 +9,12 @@ namespace LearningDDD.Presentation.Controllers
 {
     public class HabitsController : Controller
     {
-        private readonly HabitRepository _habitRepository = new HabitRepository();
+        private readonly HabitAppService _habitAppService;
 
         // GET: Habits
         public ActionResult Index()
         {
-            var habitViewModel = Mapper.Map<IEnumerable<Habit>, IEnumerable<HabitViewModel>>(_habitRepository.GetAll());
+            var habitViewModel = Mapper.Map<IEnumerable<Habit>, IEnumerable<HabitViewModel>>(_habitAppService.GetAll());
             return View(habitViewModel);
         }
 
@@ -39,7 +39,7 @@ namespace LearningDDD.Presentation.Controllers
             if (ModelState.IsValid)
             {
                 var habitDomain = Mapper.Map<HabitViewModel, Habit>(habit);
-                _habitRepository.Add(habitDomain);
+                _habitAppService.Add(habitDomain);
 
                 return RedirectToAction("Index");
             }
