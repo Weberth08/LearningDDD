@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<LearningDDD.Presentation.ViewModels.HabitViewModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Hábitos";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Novo", "Create")
 </p>
 <table class="table">
     <tr>
@@ -35,9 +35,9 @@
             @Html.DisplayFor(modelItem => item.CreationDate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.HabitId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.HabitId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.HabitId })
+            @Html.ActionLink("Editar", "Edit", new { id=item.HabitId }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.HabitId }) |
+            @Html.ActionLink("Remover", "Delete", new { id=item.HabitId })
         </td>
     </tr>
 }
