@@ -1,10 +1,11 @@
 ﻿using LearningDDD.Application.Interfaces;
 using LearningDDD.Domain.Interfaces.Services;
+using System;
 using System.Collections.Generic;
 
 namespace LearningDDD.Application
 {
-    public class AppServiceBase<Tentity> : IAppServiceBase<Tentity> where Tentity : class
+    public class AppServiceBase<Tentity> : IDisposable, IAppServiceBase<Tentity> where Tentity : class
     {
         private readonly IServiceBase<Tentity> _service;
 
