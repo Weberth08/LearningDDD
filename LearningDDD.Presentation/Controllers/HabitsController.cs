@@ -26,8 +26,9 @@ namespace LearningDDD.Presentation.Controllers
         // GET: Habits/Details/5
         public ActionResult Details(int id)
         {
+            var habitViewModel = Mapper.Map<Habit, HabitViewModel>(_habitAppService.GetById(id));
+            return View("Details", habitViewModel);
 
-            return View();
         }
 
         // GET: Habits/Create
