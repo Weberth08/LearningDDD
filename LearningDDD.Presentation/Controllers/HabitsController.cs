@@ -78,7 +78,7 @@ namespace LearningDDD.Presentation.Controllers
         public ActionResult Delete(int id)
         {
             var habitViewModel = Mapper.Map<Habit, HabitViewModel>(_habitAppService.GetById(id));
-            return RedirectToAction("Delete", habitViewModel);
+            return View("Delete", habitViewModel);
         }
 
         // POST: Habits/Delete/5
@@ -87,8 +87,9 @@ namespace LearningDDD.Presentation.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
 
+                var habitToBeDeleted = _habitAppService.GetById(id);
+                _habitAppService.Remove(habitToBeDeleted);
                 return RedirectToAction("Index");
             }
             catch
