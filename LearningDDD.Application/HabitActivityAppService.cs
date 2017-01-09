@@ -1,6 +1,7 @@
 ﻿using LearningDDD.Application.Interfaces;
 using LearningDDD.Domain.Entities;
 using LearningDDD.Domain.Interfaces.Services;
+using System.Collections.Generic;
 
 namespace LearningDDD.Application
 {
@@ -11,6 +12,11 @@ namespace LearningDDD.Application
         public HabitActivityAppService(IHabitActivityService service) : base(service)
         {
             _service = service;
+        }
+
+        public IEnumerable<HabitActivity> GetByHabitId(int habitId)
+        {
+            return _service.GetByHabitId(habitId);
         }
     }
 }
