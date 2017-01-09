@@ -144,6 +144,7 @@
     <Compile Include="AutoMapper\AutoMapperConfig.cs" />
     <Compile Include="AutoMapper\DomainToViewModelMappingProfile.cs" />
     <Compile Include="AutoMapper\ViewModelToDomainMappingProfile.cs" />
+    <Compile Include="Controllers\HabitActivityController.cs" />
     <Compile Include="Controllers\HabitsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -194,6 +195,7 @@
     <Content Include="Views\Habits\Delete.cshtml" />
     <Content Include="Views\Habits\Edit.cshtml" />
     <Content Include="Views\Habits\Details.cshtml" />
+    <Content Include="Views\HabitActivity\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
