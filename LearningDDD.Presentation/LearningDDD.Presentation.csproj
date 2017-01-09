@@ -192,6 +192,7 @@
     <Content Include="Views\Habits\Index.cshtml" />
     <Content Include="Views\Habits\Create.cshtml" />
     <Content Include="Views\Habits\Delete.cshtml" />
+    <Content Include="Views\Habits\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

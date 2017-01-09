@@ -55,7 +55,8 @@ namespace LearningDDD.Presentation.Controllers
         // GET: Habits/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var habitViewModel = Mapper.Map<Habit, HabitViewModel>(_habitAppService.GetById(id));
+            return View("Edit", habitViewModel);
         }
 
         // POST: Habits/Edit/5
@@ -64,9 +65,10 @@ namespace LearningDDD.Presentation.Controllers
         {
             try
             {
-                // TODO: Add update logic here
-
+                var habitToBeEdited = _habitAppService.GetById(id);
+                _habitAppService.Update(habitToBeEdited);
                 return RedirectToAction("Index");
+
             }
             catch
             {
