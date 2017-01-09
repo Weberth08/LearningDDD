@@ -3,7 +3,7 @@ using LearningDDD.Domain.Interfaces.Repository;
 
 namespace LearningDDD.Infrastructure.Data.Repository
 {
-    class HabitActivityRepository : RepositoryBase<HabitActivity>, IHabitActivityRepository
+    public class HabitActivityRepository : RepositoryBase<HabitActivity>, IHabitActivityRepository
     {
     }
 }

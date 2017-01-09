@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="AppServiceBase.cs" />
     <Compile Include="HabitAppService.cs" />
-    <Compile Include="HabityActivityAppService.cs" />
+    <Compile Include="HabitActivityAppService.cs" />
     <Compile Include="Interfaces\IAppServiceBase.cs" />
     <Compile Include="Interfaces\IHabitActivityAppService.cs" />
     <Compile Include="Interfaces\IHabitAppService.cs" />

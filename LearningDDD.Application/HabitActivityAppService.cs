@@ -4,11 +4,11 @@ using LearningDDD.Domain.Interfaces.Services;
 
 namespace LearningDDD.Application
 {
-    class HabityActivityAppService : AppServiceBase<HabitActivity>, IHabitActivityAppService
+    public class HabitActivityAppService : AppServiceBase<HabitActivity>, IHabitActivityAppService
     {
         private readonly IHabitActivityService _service;
 
-        public HabityActivityAppService(IHabitActivityService service) : base(service)
+        public HabitActivityAppService(IHabitActivityService service) : base(service)
         {
             _service = service;
         }

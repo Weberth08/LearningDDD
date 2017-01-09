@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LearningDDD.Domain.Entities;
+using LearningDDD.Domain.Interfaces.Repository;
 
 namespace LearningDDD.Infrastructure.Data.Repository
 {
-    class UserRepository
+    public class UserRepository : RepositoryBase<User>, IUserRepository
     {
     }
 }

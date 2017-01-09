@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using LearningDDD.Application;
+using LearningDDD.Application.Interfaces;
 using LearningDDD.Domain.Entities;
 using LearningDDD.Presentation.ViewModels;
 using System.Collections.Generic;
@@ -9,7 +9,12 @@ namespace LearningDDD.Presentation.Controllers
 {
     public class HabitsController : Controller
     {
-        private readonly HabitAppService _habitAppService;
+        private readonly IHabitAppService _habitAppService;
+
+        public HabitsController(IHabitAppService habitAppService)
+        {
+            _habitAppService = habitAppService;
+        }
 
         // GET: Habits
         public ActionResult Index()
@@ -72,7 +77,8 @@ namespace LearningDDD.Presentation.Controllers
         // GET: Habits/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var habitViewModel = Mapper.Map<Habit, HabitViewModel>(_habitAppService.GetById(id));
+            return RedirectToAction("Delete", habitViewModel);
         }
 
         // POST: Habits/Delete/5

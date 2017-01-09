@@ -4,7 +4,7 @@ using LearningDDD.Domain.Interfaces.Services;
 
 namespace LearningDDD.Application
 {
-    class UserAppService : AppServiceBase<User>, IUserAppService
+    public class UserAppService : AppServiceBase<User>, IUserAppService
     {
         private readonly IUserService _service;
 
